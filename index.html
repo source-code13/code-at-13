@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body onload="show()">
+        <!-- Container Start -->
+            <div id="container">
+                <!-- Form Wrap Start -->
+                    <div class="form-wrap">
+                        <h1>Registration</h1>
+                        <!-- Form Start -->
+                            <div class="form-start">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" name="firstname" id="first-name"  required>
+
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" name="lastname" id="last-name"  required>
+                                    
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" id="email"  required>
+
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password"  required>
+                                    
+                                        <label for="confirm password">Confirm Password</label>
+                                        <input type="password" name="password" id="password"  required>
+                                    
+                                        <label for="number">Phone Number</label>
+                                        <select id="countryCode" style="height: 40px; width: auto;">
+                                            <option value="+1">+1 (USA)</option>
+                                            <option value="+61">+61 (Australia)</option>
+                                            <option value="+81">+81 (Japan)</option>
+                                            <option value="+49">+49 (Germany)</option>
+                                            <option value="+33">+33 (France)</option>
+                                            <option value="+86">+86 (China)</option>
+                                            <option value="+7">+7 (Russia)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+91">+91 (India)</option>
+                                            <option value="+39">+39 (Italy)</option>
+                                            <option value="+34">+34 (Spain)</option>
+                                            <option value="+41">+41 (Switzerland)</option>
+                                            <option value="+46">+46 (Sweden)</option>
+                                            <option value="+31">+31 (Netherlands)</option>
+                                            <option value="+32">+32 (Belgium)</option>
+                                            <option value="+351">+351 (Portugal)</option>
+                                            <option value="+65">+65 (Singapore)</option>
+                                            <option value="+65">+65 (Singapore)</option>
+                                            <option value="+60">+60 (Malaysia)</option>
+                                            <option value="+62">+62 (Indonesia)</option>
+                                            <option value="+62">+62 (Indonesia)</option>
+                                            <option value="+254">+254 (Kenya)</option>
+                                            <option value="+254">+254 (Kenya)</option>
+                                            <option value="+41">+41 (Switzerland)</option>
+                                            <option value="+961">+961 (Lebanon)</option>
+                                            <option value="+90">+90 (Turkey)</option>
+                                            <option value="+30">+30 (Greece)</option>
+                                            <option value="+972">+972 (Israel)</option>
+                                            <option value="+359">+359 (Bulgaria)</option>
+                                            <option value="+420">+420 (Czech Republic)</option>
+                                            <option value="+45">+45 (Denmark)</option>
+                                            <option value="+47">+47 (Norway)</option>
+                                            <option value="+358">+358 (Finland)</option>
+                                            <option value="+372">+372 (Estonia)</option>
+                                            <option value="+371">+371 (Latvia)</option>
+                                            <option value="+370">+370 (Lithuania)</option>
+                                        </select><br>
+                                        <input type="phone-number" name="number" id="number" required>
+                                    
+                                        <label for="name">Name as per Marksheet</label>
+                                        <input type="text" name="name" id="name" >
+
+                                        <label for="gender">Gender</label>
+                                        <select name = "gender" id="gender" style= "width : auto; height: 40px;">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Trans">Trans</option>
+                                        </select>
+                                    
+                                        <label for="captcha">Captcha</label>
+                                        <div id="captcha" style="display: flex; width: 70px; height: 30px; border: #89ce89; background-color: #89ce98 ;">124563</div>
+                                        <input type="text" style="height: 20px" id="captcha" placeholder="Enter Captcha text" required>
+                                        <button onclick="refresh()">Refresh</button>
+
+                                    </div>
+                                    
+                                    <button id="submit" onclick="openPopup()" style="background-color: #218838; border: #218838;">Submit</button>
+                                    <div class="popup" id="popup">
+                                        <form action="verify.html">
+                                            <input type="checkbox" id="check" disabled checked value ="true">
+                                            <label for="check">Registration details are saved</label><br>
+                                            <input type="checkbox" id="check" disabled checked value ="true">
+                                            <label for="check">Letting all the details to be use for further process</label><br>
+                                            <input type="checkbox" id="check" required>
+                                            <label for="check">I certify that i am 18 years old</label><br>
+                                            <input type="checkbox" id="check" required>
+                                            <label for="check">I accept all terms and condintion</label><br>
+                                        </form>
+                                        
+                                        <button onclick="ok()">OK</button>
+                                        
+                                    
+                                    </div>
+                                </form>
+                            </div>
+                        <!-- Form Close -->
+                    </div>
+                <!-- Form Wrap Close -->
+            </div>
+        <!-- Container Close -->
+    
+        <script>
+            function show()
+            {
+                document.getElementById('captcha').innerHTML = "dwggwu";
+                let character ='1234567890qwertyuiopasdfghjklzxcvbnmLKJHGFDSAQWERTYUIOPMNBVXZ';
+                let cap = '';
+                for(let i=0;i<6;i++)
+                {
+                    let store = character.charAt(Math.floor(Math.random()*character.length));
+                    cap = cap+store;
+                }
+                document.getElementById('captcha').innerHTML = cap;
+            }
+
+            function refresh()
+            {
+                show();
+            }
+
+            function openPopup()
+            {
+                let popup = document.getElementById('popup');
+                popup.classList.add('open-popup');
+            }
+            
+            function ok()
+            {
+                document.location.href="file:///C:/Users/91902/Desktop/RegisterForm/verify.html";
+            }
+        </script>
+    </body>
+</html> 
