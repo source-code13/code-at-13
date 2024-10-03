@@ -11,28 +11,28 @@
             <div id="container">
                 <!-- Form Wrap Start -->
                     <div class="form-wrap">
-                        <h1>Registration</h1>
-                        <!-- Form Start -->
+                        <h1 style="font-family: Playwrite NZ, cursive; font-weight: 400;">REGISTRATION</h1>
+                        <!-- Form Start --> 
                             <div class="form-start">
                                 <form>
                                     <div class="form-group">
                                         <label for="first-name">First Name</label>
-                                        <input type="text" name="firstname" id="first-name"  required>
+                                        <input type="text" name="firstname" id="first-name" required>
 
                                         <label for="last-name">Last Name</label>
-                                        <input type="text" name="lastname" id="last-name"  required>
+                                        <input type="text" name="lastname" id="last-name" required>
                                     
                                         <label for="email">Email</label>
-                                        <input type="text" name="email" id="email"  required>
+                                        <input type="text" name="email" id="email" required>
 
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" id="password"  required>
+                                        <input type="password" name="password" id="password" required>
                                     
                                         <label for="confirm password">Confirm Password</label>
-                                        <input type="password" name="password" id="password"  required>
+                                        <input type="password" name="password" id="password" required>
                                     
                                         <label for="number">Phone Number</label>
-                                        <select id="countryCode" style="height: 40px; width: auto;">
+                                        <select id="countryCode" style="height: 37px; width: auto; border-radius: 5px;">
                                             <option value="+1">+1 (USA)</option>
                                             <option value="+61">+61 (Australia)</option>
                                             <option value="+81">+81 (Japan)</option>
@@ -69,29 +69,29 @@
                                             <option value="+372">+372 (Estonia)</option>
                                             <option value="+371">+371 (Latvia)</option>
                                             <option value="+370">+370 (Lithuania)</option>
-                                        </select><br>
+                                        </select>
                                         <input type="phone-number" name="number" id="number" required>
                                     
                                         <label for="name">Name as per Marksheet</label>
                                         <input type="text" name="name" id="name" >
 
                                         <label for="gender">Gender</label>
-                                        <select name = "gender" id="gender" style= "width : auto; height: 40px;">
+                                        <select name = "gender" id="gender" style= "width : auto; height: 37px; border-radius: 5PX;">
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                             <option value="Trans">Trans</option>
                                         </select>
                                     
                                         <label for="captcha">Captcha</label>
-                                        <div id="captcha" style="display: flex; width: 70px; height: 30px; border: #89ce89; background-color: #89ce98 ;">124563</div>
+                                        <div id="captcha" style="border: gray; background-color: grey; padding: 5px; width: 80px;text-align: center; font-family: Arizonia, cursive;">124563</div>
                                         <input type="text" style="height: 20px" id="captcha" placeholder="Enter Captcha text" required>
                                         <button onclick="refresh()">Refresh</button>
 
                                     </div>
                                     
-                                    <button id="submit" onclick="openPopup()" style="background-color: #218838; border: #218838;">Submit</button>
+                                    <button id="submit" onclick="openPopup()" style="font-family: Aboreto, system-ui; background-color: #218838; border: #218838;">SUBMIT</button>
                                     <div class="popup" id="popup">
-                                        <form action="verify.html">
+                                        <form>
                                             <input type="checkbox" id="check" disabled checked value ="true">
                                             <label for="check">Registration details are saved</label><br>
                                             <input type="checkbox" id="check" disabled checked value ="true">
@@ -141,7 +141,7 @@
             
             function ok()
             {
-                document.location.href="file:///C:/Users/91902/Desktop/RegisterForm/verify.html";
+                document.location.href="verify.html";
             }
         </script>
     </body>

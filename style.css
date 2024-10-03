@@ -7,10 +7,10 @@ html{
 }
 
 body{
-  font-family: 'poppins';
   background-color: white;
   color: #fff;
   line-height: 1.8;
+  background-image: url(https://images.unsplash.com/photo-1663524789735-83fabcdd00bf?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 #container{
@@ -19,11 +19,12 @@ body{
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .form-wrap{
   padding: 10px;
-  color: #333;
+  color: white;
 }
 
 .form-wrap .form-group{
@@ -32,8 +33,9 @@ body{
 
 .form-wrap .form-group label{
   display: block;
-  color: #000000;
+  color: white;
   margin-top: 20px;
+  font-family: "Edu AU VIC WA NT Guides", cursive;
 }
 
 .form-wrap .form-group input{
@@ -71,9 +73,10 @@ body{
   color: #fff;
   cursor: pointer;
   border: 1px solid #236ffc;
-  font-family: 'poppins';
+  font-family: "Aboreto", system-ui;
   font-size: 15px;
   transition: 1s;
+  border-radius: 5px;
 }
 
 .form-wrap .bottom-text{
@@ -83,7 +86,7 @@ body{
 
 .popup{
   width: 400px;
-  background: #fff;
+  background: black;
   border-radius: 6px;
   position: absolute;
   top: 0;
